@@ -7,7 +7,6 @@ import PostItem from '../posts/PostItem';
 import { Link } from 'react-router-dom';
 import CommentForm from './CommentForm';
 import CommentItem from './CommentItem';
-import Posts from '../posts/Posts';
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {

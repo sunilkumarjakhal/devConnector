@@ -17,6 +17,13 @@ import setAuthToken from '../utils/setAuthToken';
 export const loadUser = () => async (dispatch) => {
   if (localStorage.token) {
     setAuthToken(localStorage.token);
+  } else {
+    dispatch({
+      type: LOGOUT,
+    });
+    dispatch({
+      type: CLEAR_PROFILE,
+    });
   }
 
   try {

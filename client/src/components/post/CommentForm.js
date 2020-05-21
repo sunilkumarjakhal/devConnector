@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { connect, useStore } from 'react-redux';
+import { connect } from 'react-redux';
 import { addComment } from '../../actions/post';
 
 const CommentForm = ({ postId, addComment }) => {
