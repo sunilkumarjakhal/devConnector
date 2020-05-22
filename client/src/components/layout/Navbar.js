@@ -39,7 +39,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       </li>
     </ul>
   );
-
+let condition = !loading && isAuthenticated;
   return (
     <nav className='navbar bg-dark'>
       <h1>
@@ -47,9 +47,16 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <i className='fas fa-code'></i> DevConnector
         </Link>
       </h1>
+    <div className={condition ? "" : "d-none"}>
+    {authLinks}
+    </div>
+    <div className={condition ? "d-none" : ""}>
+    {guestLink}
+    </div>
+{/*       
       {!loading && (
         <Fragment>{isAuthenticated ? authLinks : guestLink}</Fragment>
-      )}
+      )} */}
     </nav>
   );
 };
