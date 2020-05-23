@@ -16,12 +16,14 @@ import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
 import Alert from './components/layout/Alert';
+import MotFound from './components/layout/NotFound';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
+import NotFound from './components/layout/NotFound';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -68,6 +70,7 @@ const App = () => {
               />
               <PrivateRoute exact path='/posts' component={Posts} />
               <PrivateRoute exact path='/posts/:id' component={Post} />
+              <Route component={NotFound} />
             </Switch>
           </section>
         </Fragment>
