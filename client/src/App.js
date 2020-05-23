@@ -16,7 +16,6 @@ import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
 import Alert from './components/layout/Alert';
-import MotFound from './components/layout/NotFound';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
